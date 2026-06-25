@@ -1280,7 +1280,7 @@ export default function VibekodingApp() {
         /* Desktop: sidebar + content */
         <div style={{ display: "flex", flex: 1, overflow: "hidden" }}>
           <div style={{
-            width: 220, flexShrink: 0,
+            width: 240, flexShrink: 0,
             background: T.surface, borderRight: `1px solid ${T.border}`,
             display: "flex", flexDirection: "column",
             padding: "28px 0", overflowY: "auto",
@@ -1322,7 +1322,9 @@ export default function VibekodingApp() {
             )}
           </div>
           <div ref={contentRef} style={{ flex: 1, overflowY: "auto", padding: "52px 40px" }}>
-            {modules_content}
+            <div style={{ maxWidth: 760, margin: "0 auto" }}>
+              {modules_content}
+            </div>
           </div>
         </div>
       )}
